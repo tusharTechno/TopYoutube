@@ -81,3 +81,30 @@ if (navbarInput && navbarSuggestions) {
         }, 200);
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButton = document.getElementById("countryDropdown");
+    const dropdownItems = document.querySelectorAll(
+        ".dropdown-menu .dropdown-item"
+    );
+
+    dropdownItems.forEach((item) => {
+        item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Get selected country flag & name
+            const flag = this.querySelector("img").src;
+            const countryName = this.textContent.trim();
+
+            // Update button content
+            dropdownButton.innerHTML = `
+          <span>
+            <img src="${flag}" alt="${countryName}" class="country-flag" />
+            <span>${countryName}</span>
+          </span>
+          <i class="bi bi-chevron-down ms-2"></i>
+        `;
+        });
+    });
+});
