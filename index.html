@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TopYouTube.com | Trending Videos Reimagined</title>
+    <meta
+      name="description"
+      content="Discover the latest trending YouTube videos by category, region, and more. Updated daily with top rankings and insights."
+    />
+    <meta
+      name="keywords"
+      content="YouTube, trending videos, top YouTube, video rankings, music, gaming, tech, news, entertainment, sports"
+    />
+    <meta name="author" content="TopYouTube" />
+    <link rel="icon" href="public/assests/images/fav.ico" />
+    <link href="public/assests/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="public/assests/css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="public/assests/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid px-md-5">
+        <a class="navbar-brand" href="/">
+          <img src="public/assests/images/logo.svg" alt="TopYouTube Logo" />
+        </a>
+        <div class="menu d-flex align-items-center gap-3">
+          <form
+            action="/pages/search.html"
+            class="search-form d-none d-md-block"
+          >
+            <div class="search-wrapper position-relative">
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Search videos..."
+                value="Music"
+                autocomplete="off"
+              />
+              <button type="submit" class="search-btn">
+                <i class="bi bi-search"></i>
+              </button>
+              <div
+                class="suggestions dropdown-menu"
+                id="navbar-suggestions"
+              ></div>
+            </div>
+          </form>
+
+
+          <button class="search-openbtn btn btn-light d-md-none">
+            <i class="bi bi-search"></i>
+          </button>
+          <div class="dropdown">
+            <button
+              class="btn btn-light dropdown-toggle custom-selectbox"
+              type="button"
+              id="countryDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span>
+                <img
+                  src="https://flagcdn.com/us.svg"
+                  alt="US"
+                  class="country-flag"
+                />
+                <span>United States</span>
+              </span>
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="countryDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img
+                    src="https://flagcdn.com/in.svg"
+                    alt="India"
+                    class="country-flag"
+                  />
+                  India
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img
+                    src="https://flagcdn.com/gb.svg"
+                    alt="UK"
+                    class="country-flag"
+                  />
+                  United Kingdom
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img
+                    src="https://flagcdn.com/ca.svg"
+                    alt="Canada"
+                    class="country-flag"
+                  />
+                  Canada
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img
+                    src="https://flagcdn.com/au.svg"
+                    alt="Australia"
+                    class="country-flag"
+                  />
+                  Australia
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section - Smaller -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Discover Trending Videos</h1>
+        <p class="hero-subtitle mb-0">
+          Top rankings by category, region, and more – updated daily.
+        </p>
+      </div>
+    </section>
+
+    <section class="filters">
+      <div
+        class="container-fluid px-md-5 d-flex flex-nowrap justify-content-lg-center"
+      >
+        <a href="/pages/search.html" class="btn filter-chip active">
+          <i class="bi bi-fire me-1"></i>Trendings
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-music-note-beamed me-1"></i>Music
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-joystick me-1"></i>Gaming
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-cpu me-1"></i>Tech
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-newspaper me-1"></i>News
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-trophy me-1"></i>Sports
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-film me-1"></i>Entertainment
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-film me-1"></i>Film & Animation
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-film me-1"></i>Travel & Events
+        </a>
+      </div>
+    </section>
+
+    <!-- Ad Zone (shifted up, before trending) -->
+    <section class="ad-zone">
+      <div class="container-fluid px-md-5">
+        <div class="ad-placeholder">
+          <i
+            class="bi bi-badge-ad fa-2x mb-3"
+            style="color: var(--primary)"
+          ></i>
+          <p>Ad Space for Google AdSense or Affiliates</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="section">
+      <div class="container-fluid px-md-5">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="video-grid">
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">10:23</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">AI Breakthroughs 2025</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> TechHub</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-26</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.1M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 13K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 371</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 45</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/3fumBcKC6RE/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">8:45</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Epic Drone Shots</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> SkyView</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-25</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 1.8M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 11K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 290</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 32</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/ScMzIvxBSi4/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">12:10</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Cooking with AI</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> FoodBot</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-24</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 1.2M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 8K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 210</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 21</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/2Vv-BfVoq4g/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">5:32</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Music Trends 2025</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> MusicNow</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-23</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 3.2M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 25K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 800</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 60</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">9:01</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Travel Vlog: Japan</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> Wanderlust</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-22</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.7M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 19K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 650</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 55</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">4:13</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Gangnam Style Rewind</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> KPopWorld</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-21</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 4.1M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 30K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 1.2K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 80</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/tAGnKpE4NCI/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">6:55</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Classic Rock Revival</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> RockLegends</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-20</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.9M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 17K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 540</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 40</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/LsoLEjrDogU/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">7:20</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Dance Moves 2025</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> DanceCrew</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-19</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 1.5M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 9K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 320</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 22</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">3:58</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">EDM Party Hits</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> EDMNation</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-18</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.3M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 15K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 410</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 35</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">4:30</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Uptown Funk Again</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> BrunoMarsVEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-17</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 3.5M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 28K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 1.1K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 70</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">5:12</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Sugar Rush</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> Maroon5VEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-16</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.6M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 21K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 900</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 50</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/2vjPBrBU-TM/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">6:40</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Chandelier Cover</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> SiaOfficial</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-15</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 1.9M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 13K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 410</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 28</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/uelHwf8o7_U/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">7:15</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Love The Way You Lie</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> EminemVEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-14</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 3.1M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 27K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 1.3K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 75</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/SlPhMPnQ58k/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">4:50</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Counting Stars</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> OneRepublicVEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-13</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.8M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 18K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 700</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 42</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">5:12</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Sugar Rush</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> Maroon5VEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-12</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.6M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 21K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 900</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 50</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/3JZ_D3ELwOQ/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">3:45</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">See You Again</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> WizKhalifaVEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-11</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 4.0M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 35K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 1.5K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 90</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/2Vv-BfVoq4g/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">5:32</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Music Trends 2025</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> MusicNow</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-10</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 3.2M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 25K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 800</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 60</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">4:30</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Uptown Funk Again</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> BrunoMarsVEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-09</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 3.5M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 28K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 1.1K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 70</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/SlPhMPnQ58k/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">4:50</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Counting Stars</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> OneRepublicVEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-08</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.8M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 18K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 700</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 42</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/uelHwf8o7_U/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">7:15</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Love The Way You Lie</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> EminemVEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-07</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 3.1M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 27K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 1.3K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 75</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/3fumBcKC6RE/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">8:45</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Epic Drone Shots</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> SkyView</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-06</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 1.8M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 11K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 290</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 32</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">10:23</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">AI Breakthroughs 2025</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> TechHub</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-05</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.1M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 13K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 371</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 45</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/SlPhMPnQ58k/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">4:50</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Counting Stars</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> OneRepublicVEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-13</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.8M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 18K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 700</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 42</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="thumbnail-container">
+              <img
+                src="https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg"
+                alt="Thumbnail"
+                class="thumbnail"
+                loading="lazy"
+              />
+              <span class="video-duration">5:12</span>
+            </div>
+            <div class="video-details">
+              <h5 class="video-title">Sugar Rush</h5>
+              <div class="video-meta">
+                <div class="meta-header">
+                  <span class="channel-name"
+                    ><i class="bi bi-person"></i> Maroon5VEVO</span
+                  >
+                  <span class="published-at"
+                    ><i class="bi bi-calendar-event"></i> 2025-08-12</span
+                  >
+                </div>
+                <div class="meta-stats">
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Views"
+                    ><i class="bi bi-eye"></i> 2.6M</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Likes"
+                    ><i class="bi bi-hand-thumbs-up"></i> 21K</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Comments"
+                    ><i class="bi bi-chat-left-text"></i> 900</span
+                  >
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Favorites"
+                    ><i class="bi bi-star-fill"></i> 50</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad Zone (shifted up, before trending) -->
+    <section class="ad-zone">
+      <div class="container-fluid px-md-5">
+        <div class="ad-placeholder">
+          <i
+            class="bi bi-badge-ad fa-2x mb-3"
+            style="color: var(--primary)"
+          ></i>
+          <p>Ad Space for Google AdSense or Affiliates</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid footer-content">
+        <h3 class="footer-title">Stay Updated</h3>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            class="form-control newsletter-input"
+            placeholder="Your email"
+          />
+          <button type="submit" class="btn newsletter-btn">Subscribe</button>
+        </form>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">About</a>
+        </div>
+        <p class="footer-copyright">
+          &copy; 2025 TopYouTube. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="public/assests/js/bootstrap.bundle.min.js"></script>
+    <script src="public/assests/js/script.js"></script>
+  </body>
+</html>

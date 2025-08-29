@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | TopYouTube</title>
+    <meta
+      name="description"
+      content="The page you're looking for doesn't exist on TopYouTube."
+    />
+    <link rel="icon" href="../public/assests/images/fav.ico" />
+    <link href="../public/assests/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../public/assests/css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../public/assests/css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid px-md-5">
+        <a class="navbar-brand" href="/">
+          <img src="../public/assests/images/logo.svg" alt="TopYouTube Logo" />
+        </a>
+        <div class="menu d-flex align-items-center gap-3">
+          <form
+            action="/pages/search.html"
+            class="search-form d-none d-md-block"
+          >
+            <div class="search-wrapper position-relative">
+              <input
+                type="text"
+                class="form-control search-input"
+                placeholder="Search videos..."
+                value="Music"
+                autocomplete="off"
+              />
+              <button type="submit" class="search-btn">
+                <i class="bi bi-search"></i>
+              </button>
+              <div
+                class="suggestions dropdown-menu"
+                id="navbar-suggestions"
+              ></div>
+            </div>
+          </form>
+
+          <button class="search-openbtn btn btn-light d-md-none">
+            <i class="bi bi-search"></i>
+          </button>
+
+          <div class="dropdown">
+            <button
+              class="btn btn-light dropdown-toggle custom-selectbox"
+              type="button"
+              id="countryDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span>
+                <img
+                  src="https://flagcdn.com/us.svg"
+                  alt="US"
+                  class="country-flag"
+                />
+                <span>United States</span>
+              </span>
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="countryDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img
+                    src="https://flagcdn.com/in.svg"
+                    alt="India"
+                    class="country-flag"
+                  />
+                  India
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img
+                    src="https://flagcdn.com/gb.svg"
+                    alt="UK"
+                    class="country-flag"
+                  />
+                  United Kingdom
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img
+                    src="https://flagcdn.com/ca.svg"
+                    alt="Canada"
+                    class="country-flag"
+                  />
+                  Canada
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img
+                    src="https://flagcdn.com/au.svg"
+                    alt="Australia"
+                    class="country-flag"
+                  />
+                  Australia
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 404 Content -->
+    <div class="error-container">
+      <div class="error-content">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Oops! Page Not Found</h1>
+        <p class="error-message">
+          The page you're looking for seems to have wandered off into the
+          digital void. It might have been moved, deleted, or perhaps never
+          existed in the first place.
+        </p>
+        <div class="error-actions">
+          <a href="/" class="btn-primary">
+            <i class="bi bi-house-door"></i> Go Home
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid footer-content">
+        <h3 class="footer-title">Stay Updated</h3>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            class="form-control newsletter-input"
+            placeholder="Your email"
+          />
+          <button type="submit" class="btn newsletter-btn">Subscribe</button>
+        </form>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+          <a href="#" class="footer-link">Contact</a>
+          <a href="#" class="footer-link">About</a>
+        </div>
+        <p class="footer-copyright">
+          &copy; 2025 TopYouTube. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../public/assests/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/assests/js/script.js"></script>
+  </body>
+</html>
