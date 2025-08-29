@@ -212,7 +212,7 @@ body {
     border-radius: 999px;
     padding: 0.9rem 2.5rem 0.9rem 1.5rem;
     border: none;
-    font-size: 0.95rem;
+    font-size: 16px;
     box-shadow: var(--shadow);
     transition: var(--transition);
     background: rgba(255, 255, 255, 0.95);
