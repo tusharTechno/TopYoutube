@@ -33,7 +33,16 @@ const suggestionsList = [
     "Music Trends 2025",
     "Uptown Funk Again",
     "Love The Way You Lie",
-    'Gangnam Style Rewind'
+    "AI Breakthroughs 2025",
+    "Cooking with AI",
+    "Travel Vlog: Japan",
+    "Classic Rock Revival",
+    "Dance Moves 2025",
+    "EDM Party Hits",
+    "Sugar Rush",
+    "Chandelier Cover",
+    "Counting Stars",
+    "See You Again"
 ];
 
 // Function to show suggestions
