@@ -549,7 +549,7 @@ footer {
     border: 1px solid var(--primary) !important;
 }
 
-.dropdown-menu {
+.custom-dropmenu{
     right: 0;
     left: unset !important;
     grid-template-columns: repeat(2, 1fr);
@@ -562,7 +562,7 @@ footer {
     top: 140% !important;
 }
 
-.dropdown-menu.show {
+.custom-dropmenu.show {
     visibility: visible;
     opacity: 1;
     transform: translateY(0) scale(1);
