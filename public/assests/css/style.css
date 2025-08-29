@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -16,7 +16,7 @@
 @font-face {
     font-family: 'Manrope';
     src: local('Manrope Bold'), local('Manrope-Bold'),
-        url('.../fonts/Manrope-Bold.woff2') format('woff2');
+        url('../fonts/Manrope-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
