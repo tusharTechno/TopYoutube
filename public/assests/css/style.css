@@ -95,6 +95,17 @@ body {
     font-size: 15px;
 }
 
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+input,
+textarea,
+p {
+    font-size: 16px;
+}
+
 /* Navbar */
 .navbar {
     background: rgba(255, 255, 255, 0.95);
@@ -492,6 +503,7 @@ footer {
 
 .newsletter-btn:hover {
     background: #cc5500;
+    color: #fff;
 }
 
 .footer-links {
@@ -509,6 +521,7 @@ footer {
     border-radius: 6px;
 }
 
+.footer-link.active,
 .footer-link:hover {
     color: var(--text-primary);
     background: rgba(0, 0, 0, 0.08);
@@ -549,7 +562,7 @@ footer {
     border: 1px solid var(--primary) !important;
 }
 
-.custom-dropmenu{
+.custom-dropmenu {
     right: 0;
     left: unset !important;
     grid-template-columns: repeat(2, 1fr);
@@ -674,6 +687,81 @@ button.search-openbtn i {
 .btn-outline:hover {
     background: rgba(255, 102, 0, 0.1);
     transform: translateY(-2px);
+}
+
+.textareas {
+    min-height: 120px !important;
+    max-height: 280px;
+}
+
+
+/* Skeleton loading styles */
+.video-card.card-loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.video-card.card-loading .thumbnail-container,
+.video-card.card-loading .video-title,
+.video-card.card-loading .channel-name,
+.video-card.card-loading .published-at,
+.video-card.card-loading .meta-stats span,
+.video-card.card-loading .video-duration {
+    background: linear-gradient(100deg, #d8d7d7 30%, #f5f5f5 50%, #e0e0e0 70%);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s linear infinite;
+    color: transparent; /* Hide text content */
+}
+
+.video-card.card-loading .thumbnail {
+    opacity: 0; /* Hide the actual thumbnail image during loading */
+}
+
+.video-card.card-loading .thumbnail-container {
+    border-radius: 4px 4px 0 0; /* No bottom radius */
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    position: relative;
+}
+
+.video-card.card-loading .video-title {
+    border-radius: 4px;
+    width: 80%;
+    height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.video-card.card-loading .channel-name,
+.video-card.card-loading .published-at {
+    border-radius: 4px;
+    width: 40%;
+    height: 1em;
+    display: inline-block;
+}
+
+.video-card.card-loading .meta-stats span {
+    border-radius: 4px;
+    width: 20%;
+    height: 1em;
+    margin-right: 10px;
+}
+
+.video-card.card-loading .video-duration {
+    border-radius: 4px;
+    width: 40px;
+    height: 16px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position-x: 200%;
+    }
+    100% {
+        background-position-x: 0%;
+    }
 }
 
 

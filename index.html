@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TopYouTube.com | Trending Videos Reimagined</title>
+    <title>
+      TopYoutube.com | Trending YouTube Videos | Daily Picks by Category
+    </title>
     <meta
       name="description"
-      content="Discover the latest trending YouTube videos by category, region, and more. Updated daily with top rankings and insights."
+      content="Check out the latest trending YouTube videos at TopYoutube.com. Explore daily picks sorted by your favorite categories and never miss what's popular."
     />
     <meta
       name="keywords"
-      content="YouTube, trending videos, top YouTube, video rankings, music, gaming, tech, news, entertainment, sports"
+      content="TopYoutube.com, trending YouTube videos, viral videos, YouTube categories, popular videos"
     />
     <meta name="author" content="TopYouTube" />
     <link rel="icon" href="public/assests/images/fav.ico" />
@@ -68,7 +70,10 @@
               </span>
               <i class="bi bi-chevron-down ms-2"></i>
             </button>
-            <ul class="dropdown-menu custom-dropmenu" aria-labelledby="countryDropdown">
+            <ul
+              class="dropdown-menu custom-dropmenu"
+              aria-labelledby="countryDropdown"
+            >
               <li>
                 <a class="dropdown-item" href="#">
                   <img
@@ -205,9 +210,7 @@
     </section>
 
     <section class="filters">
-      <div
-        class="container-fluid px-md-5 d-flex flex-nowrap justify-content-xl-center"
-      >
+      <div class="container-fluid px-md-5 d-flex flex-nowrap">
         <a href="/pages/search.html" class="btn filter-chip active">
           <i class="bi bi-fire me-1"></i>Trendings
         </a>
@@ -219,6 +222,21 @@
         </a>
         <a href="/pages/search.html" class="btn filter-chip">
           <i class="bi bi-cpu me-1"></i>Tech
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-newspaper me-1"></i>News
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-trophy me-1"></i>Sports
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-film me-1"></i>Entertainment
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-camera-video me-1"></i>Film & Animation
+        </a>
+        <a href="/pages/search.html" class="btn filter-chip">
+          <i class="bi bi-airplane me-1"></i>Travel & Events
         </a>
         <a href="/pages/search.html" class="btn filter-chip">
           <i class="bi bi-newspaper me-1"></i>News
@@ -256,24 +274,27 @@
       <div class="container-fluid px-md-5">
         <h2 class="section-title">Trending Now</h2>
         <div class="video-grid">
-          <div class="video-card">
+          <div class="video-card card-loading">
             <div class="thumbnail-container">
-              <img
-                src="https://i.ytimg.com/vi/ysz5S6PUM-U/hqdefault.jpg"
-                alt="Thumbnail"
-                class="thumbnail"
-                loading="lazy"
-              />
+              <span class="thumbnail"></span>
               <span class="video-duration">10:23</span>
             </div>
             <div class="video-details">
               <h5 class="video-title">AI Breakthroughs 2025</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> TechHub</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-26</span
                   >
                 </div>
@@ -320,10 +341,18 @@
               <h5 class="video-title">Epic Drone Shots</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> SkyView</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-25</span
                   >
                 </div>
@@ -370,10 +399,18 @@
               <h5 class="video-title">Cooking with AI</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> FoodBot</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-24</span
                   >
                 </div>
@@ -420,10 +457,18 @@
               <h5 class="video-title">Music Trends 2025</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> MusicNow</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-23</span
                   >
                 </div>
@@ -470,10 +515,18 @@
               <h5 class="video-title">Travel Vlog: Japan</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> Wanderlust</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-22</span
                   >
                 </div>
@@ -520,10 +573,18 @@
               <h5 class="video-title">Gangnam Style Rewind</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> KPopWorld</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-21</span
                   >
                 </div>
@@ -570,10 +631,18 @@
               <h5 class="video-title">Classic Rock Revival</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> RockLegends</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-20</span
                   >
                 </div>
@@ -620,10 +689,18 @@
               <h5 class="video-title">Dance Moves 2025</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> DanceCrew</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-19</span
                   >
                 </div>
@@ -670,10 +747,18 @@
               <h5 class="video-title">EDM Party Hits</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> EDMNation</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-18</span
                   >
                 </div>
@@ -720,10 +805,18 @@
               <h5 class="video-title">Uptown Funk Again</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> BrunoMarsVEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-17</span
                   >
                 </div>
@@ -770,10 +863,18 @@
               <h5 class="video-title">Sugar Rush</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> Maroon5VEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-16</span
                   >
                 </div>
@@ -820,10 +921,18 @@
               <h5 class="video-title">Chandelier Cover</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> SiaOfficial</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-15</span
                   >
                 </div>
@@ -870,10 +979,18 @@
               <h5 class="video-title">Love The Way You Lie</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> EminemVEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-14</span
                   >
                 </div>
@@ -920,10 +1037,18 @@
               <h5 class="video-title">Counting Stars</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> OneRepublicVEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-13</span
                   >
                 </div>
@@ -970,10 +1095,18 @@
               <h5 class="video-title">Sugar Rush</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> Maroon5VEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-12</span
                   >
                 </div>
@@ -1020,10 +1153,18 @@
               <h5 class="video-title">See You Again</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> WizKhalifaVEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-11</span
                   >
                 </div>
@@ -1070,10 +1211,18 @@
               <h5 class="video-title">Music Trends 2025</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> MusicNow</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-10</span
                   >
                 </div>
@@ -1120,10 +1269,18 @@
               <h5 class="video-title">Uptown Funk Again</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> BrunoMarsVEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-09</span
                   >
                 </div>
@@ -1170,10 +1327,18 @@
               <h5 class="video-title">Counting Stars</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> OneRepublicVEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-08</span
                   >
                 </div>
@@ -1220,10 +1385,18 @@
               <h5 class="video-title">Love The Way You Lie</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> EminemVEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-07</span
                   >
                 </div>
@@ -1270,10 +1443,18 @@
               <h5 class="video-title">Epic Drone Shots</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> SkyView</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-06</span
                   >
                 </div>
@@ -1320,10 +1501,18 @@
               <h5 class="video-title">AI Breakthroughs 2025</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> TechHub</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-05</span
                   >
                 </div>
@@ -1370,10 +1559,18 @@
               <h5 class="video-title">Counting Stars</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> OneRepublicVEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-13</span
                   >
                 </div>
@@ -1420,10 +1617,18 @@
               <h5 class="video-title">Sugar Rush</h5>
               <div class="video-meta">
                 <div class="meta-header">
-                  <span class="channel-name"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Channel Name"
+                    class="channel-name"
                     ><i class="bi bi-person"></i> Maroon5VEVO</span
                   >
-                  <span class="published-at"
+                  <span
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Published At"
+                    class="published-at"
                     ><i class="bi bi-calendar-event"></i> 2025-08-12</span
                   >
                 </div>
@@ -1486,10 +1691,13 @@
           <button type="submit" class="btn newsletter-btn">Subscribe</button>
         </form>
         <div class="footer-links">
-          <a href="#" class="footer-link">Privacy</a>
-          <a href="#" class="footer-link">Terms</a>
-          <a href="#" class="footer-link">Contact</a>
-          <a href="#" class="footer-link">About</a>
+          <a href="/pages/privacy-policy.html" class="footer-link">Privacy</a>
+          <a href="/pages/terms-of-use.html" class="footer-link">Terms</a>
+          <a href="/pages/contactus.html" class="footer-link">Contact</a>
+          <a href="/pages/aboutus.html" class="footer-link">About</a>
+          <a href="/pages/affiliate-disclosure.html" class="footer-link"
+            >Affiliate</a
+          >
         </div>
         <p class="footer-copyright">
           &copy; 2025 TopYouTube. All rights reserved.

@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Not Found | TopYouTube</title>
+    <title>TopYoutube.com | Contact Us | We’d Love to Hear From You</title>
     <meta
       name="description"
-      content="The page you're looking for doesn't exist on TopYouTube."
+      content="Have a question or suggestion? Reach out to us at TopYoutube.com. We’re happy to help and listen to your feedback."
+    />
+    <meta
+      name="keywords"
+      content="contact TopYoutube.com, support, feedback, help, questions"
     />
     <link rel="icon" href="../public/assests/images/fav.ico" />
     <link href="../public/assests/css/bootstrap.min.css" rel="stylesheet" />
@@ -21,10 +25,7 @@
           <img src="../public/assests/images/logo.svg" alt="TopYouTube Logo" />
         </a>
         <div class="menu d-flex align-items-center gap-3">
-          <form
-            action="/pages/search.html"
-            class="search-form d-none d-md-block"
-          >
+          <form action="search.html" class="search-form d-none d-md-block">
             <div class="search-wrapper position-relative">
               <input
                 type="text"
@@ -193,23 +194,99 @@
       </div>
     </nav>
 
-    <!-- 404 Content -->
-    <div class="error-container">
-      <div class="error-content">
-        <div class="error-code">404</div>
-        <h1 class="error-title">Oops! Page Not Found</h1>
-        <p class="error-message">
-          The page you're looking for seems to have wandered off into the
-          digital void. It might have been moved, deleted, or perhaps never
-          existed in the first place.
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-subtitle">
+          Get in touch with our team for any inquiries or support.
         </p>
-        <div class="error-actions">
-          <a href="/" class="btn-primary">
-            <i class="bi bi-house-door"></i> Go Home
-          </a>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <p>
+              We're here to help! Whether you have questions about our platform,
+              suggestions for improvements, partnership opportunities, technical
+              issues, or general feedback, feel free to reach out. Our dedicated
+              support team is committed to providing timely and helpful
+              responses, typically within 24-48 hours during business days.
+            </p>
+
+            <form action="/submit-contact" method="post">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  name="subject"
+                  placeholder="Enter subject"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control textareas"
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+
+            <p class="mt-4">
+              Alternatively, you can email us directly at
+              <a href="mailto:contact@topyoutube.com">contact@topyoutube.com</a
+              >. For urgent matters, call us at <strong>+1-123-456-7890</strong>
+              (available Monday to Friday, 9 AM to 5 PM EST).
+            </p>
+
+            <p>
+              Our mailing address: <br />
+              <strong>TopYouTube.com</strong>, 123 Trend Street, Video City, CA
+              90210, USA.
+            </p>
+            <p>
+              Thank you for your interest in <strong>TopYouTube.com</strong>. We
+              appreciate your patience and look forward to hearing from you!
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -226,7 +303,7 @@
         <div class="footer-links">
           <a href="privacy-policy.html" class="footer-link">Privacy</a>
           <a href="terms-of-use.html" class="footer-link">Terms</a>
-          <a href="contactus.html" class="footer-link">Contact</a>
+          <a href="contactus.html" class="footer-link active">Contact</a>
           <a href="aboutus.html" class="footer-link">About</a>
           <a href="affiliate-disclosure.html" class="footer-link">Affiliate</a>
         </div>
