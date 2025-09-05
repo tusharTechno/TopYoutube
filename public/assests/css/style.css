@@ -81,7 +81,7 @@
     /* Card background */
     --text-primary: #212529;
     /* Dark text */
-    --text-secondary: #6c757d;
+    --text-secondary: #44494e;
     /* Gray text */
     --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -418,7 +418,7 @@ p {
 }
 
 .published-at {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     white-space: nowrap;
 }
 
@@ -426,6 +426,7 @@ p {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    color:var(--text-primary);
 }
 
 .meta-stats span {
@@ -582,6 +583,9 @@ footer {
     transition: opacity 0.25s ease, transform 0.25s ease;
     transform-origin: top right;
     top: 140% !important;
+    max-height:210px;
+    overflow-x:hidden;
+    overflow-y:scroll;
 }
 
 .custom-dropmenu.show {
@@ -602,10 +606,6 @@ button.search-openbtn {
 button.search-openbtn i {
     color: var(--primary);
 }
-
-
-
-
 
 /* 404 Content */
 .error-container {
