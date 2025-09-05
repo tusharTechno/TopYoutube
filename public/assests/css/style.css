@@ -103,7 +103,7 @@ h3 {
 input,
 textarea,
 p {
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 /* Navbar */
@@ -876,7 +876,7 @@ button.search-openbtn i {
 
 
     .footer-links {
-        column-gap: 0.5rem;
+        column-gap: 0.8rem;
     }
 
 }
