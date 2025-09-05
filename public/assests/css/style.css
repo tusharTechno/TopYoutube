@@ -508,8 +508,10 @@ footer {
 
 .footer-links {
     display: flex;
-    gap: 1.25rem;
+    column-gap: 1.25rem;
+    row-gap: 0.5rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
 .footer-link {
@@ -710,15 +712,18 @@ button.search-openbtn i {
     background: linear-gradient(100deg, #d8d7d7 30%, #f5f5f5 50%, #e0e0e0 70%);
     background-size: 200% 100%;
     animation: shimmer 2.5s linear infinite;
-    color: transparent; /* Hide text content */
+    color: transparent;
+    /* Hide text content */
 }
 
 .video-card.card-loading .thumbnail {
-    opacity: 0; /* Hide the actual thumbnail image during loading */
+    opacity: 0;
+    /* Hide the actual thumbnail image during loading */
 }
 
 .video-card.card-loading .thumbnail-container {
-    border-radius: 4px 4px 0 0; /* No bottom radius */
+    border-radius: 4px 4px 0 0;
+    /* No bottom radius */
     aspect-ratio: 16 / 9;
     width: 100%;
     position: relative;
@@ -759,6 +764,7 @@ button.search-openbtn i {
     0% {
         background-position-x: 200%;
     }
+
     100% {
         background-position-x: 0%;
     }
@@ -866,6 +872,11 @@ button.search-openbtn i {
         border-radius: 0;
         box-shadow: none;
         margin-top: 0;
+    }
+
+
+    .footer-links {
+        column-gap: 0.5rem;
     }
 
 }
